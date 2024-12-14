@@ -18,6 +18,12 @@ const Login = () => {
       const res = await axios.post(`https://expocon-nare.vercel.app/auth/login`, {
         email,
         password,
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Requested-With': 'XMLHttpRequest', // Add this header
+          // Optionally, you can add the Origin header
+          'Origin': 'https://expocon-nare-bdcq.vercel.app'
+      },
       });
 
       if (res?.data?.success) {
