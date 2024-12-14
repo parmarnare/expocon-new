@@ -12,6 +12,7 @@ const Login = () => {
   const [auth, setAuth] = useAuth();
   const handleSubmit = async (e) => {
     e.preventDefault();
+    axios.defaults.withCredentials = true;
     try {
       const res = await axios.post(`https://expocon-nare.vercel.app/auth/login`, {
         email,
