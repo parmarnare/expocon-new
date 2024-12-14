@@ -19,7 +19,7 @@ dotenv.config();
 const app = express();
 app.use(cors(
   {
-    origin: "https://expocon-nare-bdcq.vercel.app",
+    origin: "https://expocon-master-dev.vercel.app",
     method: ["GET", "POST", "OPTIONS", "PUT", "PATCH", "DELETE"],
     credentials: true
   }
