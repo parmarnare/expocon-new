@@ -33,7 +33,7 @@ const Scancategory = () => {
   const editScan = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.put(`https://expocon-master.vercel.app/scan/update`, {
+      const res = await axios.put(`http://localhost:5000/api/v1//scan/update`, {
         _id: editScanId,
         category: editScanName,
         status: editScanStatus,
@@ -56,7 +56,7 @@ const Scancategory = () => {
     e.preventDefault();
     try {
       console.log(scanName);
-      const res = await axios.post(`https://expocon-master.vercel.app/scan/create`, {
+      const res = await axios.post(`http://localhost:5000/api/v1//scan/create`, {
         category: scanName,
         type: scanType,
       });
@@ -77,7 +77,7 @@ const Scancategory = () => {
   const getAllScans = async () => {
     try {
       const res = await axios.get(
-        `https://expocon-master.vercel.app/scan/all-scans`
+        `http://localhost:5000/api/v1//scan/all-scans`
       );
 
       if (res?.data?.success) {

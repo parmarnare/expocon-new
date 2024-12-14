@@ -18,7 +18,7 @@ const SelfCertificatePrintingKiosk = () => {
   const allAttendees = async (searchQuery) => {
     try {
       const res = await axios.post(
-        `https://expocon-master.vercel.app/attendee/all-attendee`,
+        `http://localhost:5000/api/v1//attendee/all-attendee`,
         { searchQuery }
       );
       if (res.data.success) {
@@ -44,7 +44,7 @@ const SelfCertificatePrintingKiosk = () => {
       const decodedToken = decodeToken(token, process.env.JWT_SECRET);
 
       const res = await axios.put(
-        `https://expocon-master.vercel.app/attendee/update`,
+        `http://localhost:5000/api/v1//attendee/update`,
         {
           reg_number,
           certificate_printed: true,

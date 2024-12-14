@@ -14,7 +14,7 @@ const QRCodePrintComponent = forwardRef(
     const getEvent = async () => {
       try {
         const res = await axios.get(
-          `https://expocon-master.vercel.app/event/get-badge`
+          `http://localhost:5000/api/v1//event/get-badge`
         );
         if (res.data.success) {
           setBadgeSetup(res.data.badge);

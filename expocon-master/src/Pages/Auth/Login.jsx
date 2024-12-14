@@ -10,15 +10,13 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [auth, setAuth] = useAuth();
-  axios.defaults.withCredentials = true;
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
     try {
-      const res = await axios.post(`https://expocon-master.vercel.app/auth/login`, {
+      const res = await axios.post(`http://localhost:5000/api/v1/auth/login`, {
         email,
         password,
-      }); 
+      });
 
       if (res?.data?.success) {
         setAuth({ user: res?.data?.user})
