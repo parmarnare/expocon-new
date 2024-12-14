@@ -20,10 +20,12 @@ const app = express();
 app.use(cors(
   {
     origin: ["https://expocon-nare-bdcq.vercel.app"],
-    method: ["POST", "GET"],
+    method: ["GET", "POST", "OPTIONS", "PUT", "PATCH", "DELETE"],
+    headers: {"Access-Control-Allow-Origin": "*",  "Access-Control-Allow-Headers": "X-Requested-With,content-type"},
     credentials: true
   }
 ));
+
 app.use(express.json());
 app.use("/api/v1/auth", userRouter);
 app.use("/api/v1/badge", badgeRouter);
