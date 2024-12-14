@@ -1,0 +1,54 @@
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.shado {
+  box-shadow: 0 0 5px 0.5px rgb(126, 125, 125);
+}
+
+
+/* .Toastify {
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  z-index: 9999999999;
+  border-radius: 4px;
+}
+
+.Toastify__close-button {
+  width: 18px;
+  height: 18px;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: transparent;
+  color: #ffffff;
+  opacity: 1;
+}
+*/
+
+.Toastify__close-button:hover {
+  color: red;
+  background-color: transparent;
+} 
+
+#reader__scan_region {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
