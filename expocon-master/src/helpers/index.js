@@ -3,7 +3,7 @@ import axios from "axios";;
 export const checkAuthentication = async (token) => {
   try {
     const response = await axios.get(
-      `https://expocon-nare.vercel.app/auth/user-auth`,
+      `https://expocon-master.vercel.app/auth/user-auth`,
       {
         headers: {
           Authorization: token,

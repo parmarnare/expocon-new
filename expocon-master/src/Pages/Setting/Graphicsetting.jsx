@@ -24,7 +24,7 @@ const Graphicsetting = () => {
       }
 
       const response = await axios.put(
-        `https://expocon-nare.vercel.app/event/update/667fedd5ab2117f6af392688`,
+        `https://expocon-master.vercel.app/event/update/667fedd5ab2117f6af392688`,
         formData,
         {
           headers: {

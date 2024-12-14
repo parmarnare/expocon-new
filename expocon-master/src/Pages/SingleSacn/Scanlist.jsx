@@ -8,7 +8,7 @@ const Scanlist = () => {
   const getScanList = async () => {
     try {
       const res = await axios.get(
-        `https://expocon-nare.vercel.app/scan/single-scans`
+        `https://expocon-master.vercel.app/scan/single-scans`
       );
       if (res.data.success) {
         setScans(res.data.scans);

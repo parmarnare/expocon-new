@@ -15,7 +15,7 @@ const Login = () => {
     e.preventDefault();
     
     try {
-      const res = await axios.post(`https://expocon-nare.vercel.app/auth/login`, {
+      const res = await axios.post(`https://expocon-master.vercel.app/auth/login`, {
         email,
         password,
       }); 

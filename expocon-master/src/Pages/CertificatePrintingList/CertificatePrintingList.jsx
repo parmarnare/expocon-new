@@ -8,7 +8,7 @@ const CertificatePrintingList = () => {
   const [certificates, setCertificates ] = useState([])
   const getCertificateList = async() =>{
     try {
-      const res = await axios.get(`https://expocon-nare.vercel.app/certificate/all-certificates`);
+      const res = await axios.get(`https://expocon-master.vercel.app/certificate/all-certificates`);
       if(res.data.success){
         setCertificates(res.data.certificates)
       }

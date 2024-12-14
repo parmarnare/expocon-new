@@ -19,7 +19,7 @@ const AddRegistration = () => {
     try {
       console.log(notAllowed);
       const res = await axios.post(
-        `https://expocon-nare.vercel.app/attendee/create`,
+        `https://expocon-master.vercel.app/attendee/create`,
         { name, place, badge, mobile, email, reference, notAllowed }
       );
       if (res.data.success) {
@@ -40,7 +40,7 @@ const AddRegistration = () => {
   const getScans = async () => {
     try {
       const res = await axios.get(
-        `https://expocon-nare.vercel.app/scan/all-scans`
+        `https://expocon-master.vercel.app/scan/all-scans`
       );
       if (res.data.success) {
         setScanItems(res?.data?.scans);
@@ -53,7 +53,7 @@ const AddRegistration = () => {
   const getBadges = async () => {
     try {
       const res = await axios.get(
-        `https://expocon-nare.vercel.app/badge/all-badges`
+        `https://expocon-master.vercel.app/badge/all-badges`
       );
       if (res.data.success) setBadges(res?.data?.badges);
     } catch (error) {

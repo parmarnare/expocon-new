@@ -5,7 +5,7 @@ const DownloadReport = () => {
 
   const handleExport = async () => {
     try {
-      const response = await axios.get(`https://expocon-nare.vercel.app/attendee/export`, {
+      const response = await axios.get(`https://expocon-master.vercel.app/attendee/export`, {
         responseType: 'blob', // Important
       });
 
