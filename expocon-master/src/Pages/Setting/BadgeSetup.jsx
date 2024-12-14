@@ -12,7 +12,7 @@ const BadgeSetup = () => {
   const getEvent = async () => {
     try {
       const res = await axios.get(
-        `${process.env.REACT_APP_API}/event/get-badge`
+        `https://expocon-nare.vercel.app/event/get-badge`
       );
       if (res.data.success) {
         setMarginTop(res.data.badge.marginTop);
@@ -48,7 +48,7 @@ const BadgeSetup = () => {
         console.log(`${key}: ${value}`);
       }
       const response = await axios.put(
-        `${process.env.REACT_APP_API}/event/update/${eventId}`,
+        `https://expocon-nare.vercel.app/event/update/${eventId}`,
         formData,
         {
           headers: {

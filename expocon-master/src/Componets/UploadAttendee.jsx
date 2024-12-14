@@ -42,7 +42,7 @@ const UploadData = () => {
               console.log("Converted notAllowed:", notAllowed);
 
               const res = await axios.post(
-                `${process.env.REACT_APP_API}/attendee/create`,
+                `https://expocon-nare.vercel.app/attendee/create`,
                 {
                   reg_number: row.Reg_Number,
                   name: row.Name,

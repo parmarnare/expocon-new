@@ -23,7 +23,7 @@ const VisitorRegistrationKiosk = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        `${process.env.REACT_APP_API}/attendee/create`,
+        `https://expocon-nare.vercel.app/attendee/create`,
         {
           name,
           company,
@@ -56,7 +56,7 @@ const VisitorRegistrationKiosk = () => {
   const getStates = async () => {
     try {
       const res = await axios.get(
-        `${process.env.REACT_APP_API}/state/all-states`
+        `https://expocon-nare.vercel.app/state/all-states`
       );
       if (res.data.success) setAllStates(res?.data?.states);
     } catch (error) {
@@ -67,7 +67,7 @@ const VisitorRegistrationKiosk = () => {
   const getHowUs = async () => {
     try {
       const res = await axios.get(
-        `${process.env.REACT_APP_API}/howUs/all-howUs`
+        `https://expocon-nare.vercel.app/howUs/all-howUs`
       );
       if (res.data.success) setAllHowUs(res?.data?.howUses);
       console.log(allHowUs);
@@ -79,7 +79,7 @@ const VisitorRegistrationKiosk = () => {
   const getCountries = async () => {
     try {
       const res = await axios.get(
-        `${process.env.REACT_APP_API}/country/all-countries`
+        `https://expocon-nare.vercel.app/country/all-countries`
       );
       if (res.data.success) setAllCountry(res?.data?.countries);
     } catch (error) {

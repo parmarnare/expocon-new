@@ -33,7 +33,7 @@ const Scancategory = () => {
   const editScan = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.put(`${process.env.REACT_APP_API}/scan/update`, {
+      const res = await axios.put(`https://expocon-nare.vercel.app/scan/update`, {
         _id: editScanId,
         category: editScanName,
         status: editScanStatus,
@@ -56,7 +56,7 @@ const Scancategory = () => {
     e.preventDefault();
     try {
       console.log(scanName);
-      const res = await axios.post(`${process.env.REACT_APP_API}/scan/create`, {
+      const res = await axios.post(`https://expocon-nare.vercel.app/scan/create`, {
         category: scanName,
         type: scanType,
       });
@@ -77,7 +77,7 @@ const Scancategory = () => {
   const getAllScans = async () => {
     try {
       const res = await axios.get(
-        `${process.env.REACT_APP_API}/scan/all-scans`
+        `https://expocon-nare.vercel.app/scan/all-scans`
       );
 
       if (res?.data?.success) {

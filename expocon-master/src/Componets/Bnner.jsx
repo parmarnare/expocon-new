@@ -5,7 +5,7 @@ const Banner = () => {
 
       <img
         className="mt-16 md:mt-24 w-full md:h-72 h-40"
-        src={`${process.env.REACT_APP_API}/event/latest-banner`}
+        src={`https://expocon-nare.vercel.app/event/latest-banner`}
         alt="banner"
       />
     </div>

@@ -17,7 +17,7 @@ const EditAttendee = ({ toggleModal, attendee }) => {
     toggleModal();
     try { 
       const res = await axios.put(
-        `${process.env.REACT_APP_API}/attendee/update`,
+        `https://expocon-nare.vercel.app/attendee/update`,
         { reg_number:attendee.reg_number, name, place, badge, mobile, email, reference }
       );
       if (res.data.success) {
@@ -34,7 +34,7 @@ const EditAttendee = ({ toggleModal, attendee }) => {
   const getBadges = async () => {
     try {
       const res = await axios.get(
-        `${process.env.REACT_APP_API}/badge/all-badges`
+        `https://expocon-nare.vercel.app/badge/all-badges`
       );
       if (res.data.success) setBadges(res?.data?.badges);
     } catch (error) {

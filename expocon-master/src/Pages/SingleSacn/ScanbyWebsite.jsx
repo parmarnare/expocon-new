@@ -11,7 +11,7 @@ const ScanbyWebsite = () => {
   const isUserAllowed = async (scanUserId) => {
     try {
       const res = await axios.post(
-        `${process.env.REACT_APP_API}/attendee/is-allowed`,
+        `https://expocon-nare.vercel.app/attendee/is-allowed`,
         {
           reg_number: scanUserId,
           scan_id: id,

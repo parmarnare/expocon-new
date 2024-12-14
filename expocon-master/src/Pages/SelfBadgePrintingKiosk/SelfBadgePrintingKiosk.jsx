@@ -18,7 +18,7 @@ const SelfBadgePrintingKiosk = () => {
   const allAttendees = async (searchQuery) => {
     try {
       const res = await axios.post(
-        `${process.env.REACT_APP_API}/attendee/all-attendee`,
+        `https://expocon-nare.vercel.app/attendee/all-attendee`,
         { searchQuery }
       );
       if (res.data.success) {
@@ -50,7 +50,7 @@ const SelfBadgePrintingKiosk = () => {
       const decodedToken = decodeToken(token, process.env.JWT_SECRET);
 
       const res = await axios.put(
-        `${process.env.REACT_APP_API}/attendee/update`,
+        `https://expocon-nare.vercel.app/attendee/update`,
         {
           reg_number,
           badge_printed: true,

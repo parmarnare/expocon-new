@@ -31,7 +31,7 @@ const CertificateCategory = () => {
     e.preventDefault();
     try {
       const res = await axios.put(
-        `${process.env.REACT_APP_API}/certificate/update`,
+        `https://expocon-nare.vercel.app/certificate/update`,
         {
           _id: editCertificateId,
           category: editCertificateName,
@@ -56,7 +56,7 @@ const CertificateCategory = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        `${process.env.REACT_APP_API}/certificate/create`,
+        `https://expocon-nare.vercel.app/certificate/create`,
         { category: certificateName }
       );
 
@@ -76,7 +76,7 @@ const CertificateCategory = () => {
   const getAllCertificates = async () => {
     try {
       const res = await axios.get(
-        `${process.env.REACT_APP_API}/certificate/all-certificates`
+        `https://expocon-nare.vercel.app/certificate/all-certificates`
       );
 
       if (res?.data?.success) {
