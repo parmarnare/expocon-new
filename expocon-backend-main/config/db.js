@@ -3,7 +3,7 @@ import colors from 'colors';
 
 const connectDB = async () => {
     try {
-        const conn = await mongoose.connect(process.env.MONGO_URL);
+        const conn = await mongoose.connect("mongodb+srv://expoUser:expoPassword@expocluster.ddeqx.mongodb.net/?retryWrites=true&w=majority&appName=ExpoCluster");
         console.log("Connected to the database".bgMagenta);
 
     } catch (error) {
