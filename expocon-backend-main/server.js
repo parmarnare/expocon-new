@@ -25,7 +25,6 @@ app.use(cors(
   }
 ));
 app.use(express.json());
-
 app.use("/api/v1/auth", userRouter);
 app.use("/api/v1/badge", badgeRouter);
 app.use("/api/v1/certificate", certificateRouter);
