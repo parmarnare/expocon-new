@@ -18,7 +18,6 @@ const Login = () => {
       const res = await axios.post(`https://expocon-nare.vercel.app/auth/login`, {
         email,
         password,
-        
       }); 
 
       if (res?.data?.success) {
