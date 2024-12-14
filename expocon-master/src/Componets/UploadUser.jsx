@@ -42,7 +42,7 @@ const UploadUser = () => {
               console.log("Converted notAllowed:", notAllowed);
 
               const res = await axios.post(
-                `http://localhost:5000/api/v1//auth/register`,
+                `https://expocon-master.vercel.app/api/v1//auth/register`,
                 {
                   email: row.Email,
                   password: `${row.Password}`,

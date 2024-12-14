@@ -8,7 +8,7 @@ const EntryList = () => {
   const [scans, setScans ] = useState([])
   const getScanList = async() =>{
     try {
-      const res = await axios.get(`http://localhost:5000/api/v1//scan/multi-scans`);
+      const res = await axios.get(`https://expocon-master.vercel.app/api/v1//scan/multi-scans`);
       if(res.data.success){
         setScans(res.data.scans)
       }

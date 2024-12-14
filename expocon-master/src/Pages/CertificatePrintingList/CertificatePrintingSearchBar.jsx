@@ -23,7 +23,7 @@ const CertificatePrintingSearchBar = () => {
   const allAttendees = async (searchQuery) => {
     try {
       const res = await axios.post(
-        `http://localhost:5000/api/v1//attendee/all-attendee`,
+        `https://expocon-master.vercel.app/api/v1//attendee/all-attendee`,
         { searchQuery }
       );
       if (res.data.success) {
@@ -56,7 +56,7 @@ const CertificatePrintingSearchBar = () => {
       const decodedToken = decodeToken(token, process.env.JWT_SECRET);
 
       const res = await axios.put(
-        `http://localhost:5000/api/v1//attendee/update`,
+        `https://expocon-master.vercel.app/api/v1//attendee/update`,
         {
           reg_number,
           certificate_printed: true,

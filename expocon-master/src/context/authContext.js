@@ -13,7 +13,7 @@ const AuthProvider = ({ children }) => {
   const getUser = async (token) => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/v1/auth/user-auth`,
+        `https://expocon-master.vercel.app/api/v1/auth/user-auth`,
         {
           headers: {
             authorization: token,

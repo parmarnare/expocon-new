@@ -30,7 +30,7 @@ const BadgeCategory = () => {
   const editBadge = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.put(`http://localhost:5000/api/v1//badge/update`, {
+      const res = await axios.put(`https://expocon-master.vercel.app/api/v1//badge/update`, {
         _id: editBadgeId,
         category: editBadgeName,
         status: editBadgeStatus,
@@ -53,7 +53,7 @@ const BadgeCategory = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        `http://localhost:5000/api/v1//badge/create`,
+        `https://expocon-master.vercel.app/api/v1//badge/create`,
         { category: badgeName }
       );
 
@@ -73,7 +73,7 @@ const BadgeCategory = () => {
   const getAllBadges = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/v1//badge/all-Badges`
+        `https://expocon-master.vercel.app/api/v1//badge/all-Badges`
       );
 
       if (res?.data?.success) {
