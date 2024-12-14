@@ -13,7 +13,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`${process.env.REACT_APP_API}/auth/login`, {
+      const res = await axios.post(`https://expocon-nare.vercel.app/auth/login`, {
         email,
         password,
       });
