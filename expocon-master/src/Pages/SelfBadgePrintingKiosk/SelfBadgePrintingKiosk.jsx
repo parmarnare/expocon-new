@@ -47,7 +47,7 @@ const SelfBadgePrintingKiosk = () => {
   const updateAttendeePrintStatus = async (reg_number) => {
     try {
       const token = auth?.token;
-      const decodedToken = decodeToken(token, process.env.JWT_SECRET);
+      const decodedToken = decodeToken(token, 'mySuperSecretKey');
 
       const res = await axios.put(
         `http://localhost:5000/api/v1/attendee/update`,
