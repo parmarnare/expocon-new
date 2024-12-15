@@ -55,7 +55,7 @@ export const loginController = async (req, res) => {
       });
 
     const user = await User.findOne({ user_email: email });
-
+   
     const match = await bcrypt.compare(password, user.user_password);
 
     if (!user || !match)
@@ -64,7 +64,7 @@ export const loginController = async (req, res) => {
         message: "Invalid Credentials",
       });
 
-    const token = JWT.sign({ _id: user._id }, process.env.JWT_SECRET, {
+    const token = JWT.sign({ _id: user._id }, 'mySuperSecretKey', {
       expiresIn: "30d",
     });
 

@@ -17,7 +17,7 @@ const EditAttendee = ({ toggleModal, attendee }) => {
     toggleModal();
     try { 
       const res = await axios.put(
-        `https://expocon-master.vercel.app/api/v1//attendee/update`,
+        `http://localhost:5000/api/v1/attendee/update`,
         { reg_number:attendee.reg_number, name, place, badge, mobile, email, reference }
       );
       if (res.data.success) {
@@ -34,7 +34,7 @@ const EditAttendee = ({ toggleModal, attendee }) => {
   const getBadges = async () => {
     try {
       const res = await axios.get(
-        `https://expocon-master.vercel.app/api/v1//badge/all-badges`
+        `http://localhost:5000/api/v1/badge/all-badges`
       );
       if (res.data.success) setBadges(res?.data?.badges);
     } catch (error) {
